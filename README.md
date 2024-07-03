@@ -4,6 +4,7 @@
 
 ```bash
 mvn package
+clean package
 ```
 
 ## Deploy WAR Package
