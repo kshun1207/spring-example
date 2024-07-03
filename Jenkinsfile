@@ -15,11 +15,11 @@
         sh 'mvn clean package' 
       } 
     } 
-    /*stage('Test') { 
+    stage('Test') { 
       steps { 
-        sh ' ' 
+        sh 'mvn test' 
       } 
-    } */
+    }
     stage('Deploy') { 
       steps { 
         deploy adapters: [tomcat9(credentialsId: 'tomcat-manager', url: 'http://192.168.56.102:8080')], 
