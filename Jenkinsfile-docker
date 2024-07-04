@@ -51,7 +51,6 @@ pipeline{
                 docker { image 'docker:dind'}
             }
             steps{
-                withDockerRegistry(credentialsId: 'docker-hub-token', url: 'https://index.docker.io/v1/')
                 sh 'docker -H tcp://192.168.56.104:2375 container run --detach --name mytomcat -p 80:8080 kshun1207/mytomcat:$BUILD_NUMBER'
             }
         }
