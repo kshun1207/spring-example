@@ -57,7 +57,7 @@ spec:
         stage('image build, tag, push to docker hub'){
             steps{
                 container('kaniko'){
-                    sh 'executor --context=dir://$WORKSPACE --destination=mytomcat:$BUILD_NUMBER --destination=mytomcat:latest'
+                    sh 'executor --context=dir://$WORKSPACE --destination=kshun1207/mytomcat:$BUILD_NUMBER --destination=kshun1207/mytomcat:latest'
                 }
             }
         }
