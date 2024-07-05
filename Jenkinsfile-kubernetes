@@ -17,7 +17,7 @@ spec:
     command:
     - sleep
     args:
-    - inginity
+    - infinity
   - name: kaniko
     image: gcr.io/kaniko-project/executor:debug
     command:
