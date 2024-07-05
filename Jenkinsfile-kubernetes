@@ -43,14 +43,14 @@ spec:
         stage('maven-build'){
             steps{
                 container('maven'){
-                    sh 'mv package -DskipTests=true'
+                    sh 'mvn package -DskipTests=true'
                 }
             }
         }
         stage('maven-test'){
             steps{
                 container('maven'){
-                    sh 'mv test'
+                    sh 'mvn test'
                 }
             }
         }
