@@ -75,7 +75,7 @@ spec:
                 githubRepo = 'test-argocd' //jenkins-kube-deploy 
                 githubURL = "https://github.com/${githubId}/${githubRepo}.git" 
                 dockerhubId = 'kshun1207' //c1t1d0s7 
-                dockerhubRepo = 'kshun1207/mytomcat' //hello-world
+                dockerhubRepo = 'mytomcat' //hello-world
             }
             steps{
                 container('git'){
