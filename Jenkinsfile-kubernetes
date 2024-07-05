@@ -86,8 +86,8 @@ spec:
                     sh 'sed -i "s/image:.*/image: ${dockerhubId}\\/${dockerhubRepo}:${BUILD_NUMBER}/g" deployment.yaml'
                     sh 'git add deployment.yaml'
                     sh 'git commit -m "jenkins build number -> ${BUILD_NUMBER}"'
-                    withCredentials([gitUsernamePassword(credentialId: 'github-credential', gitTooName: 'Default')]){
-                        sh 'git push --set-upstream origin'
+                    withCredentials([gitUsernamePassword(credentialsId: 'github-credential', gitToolName: 'Default')]){
+                        sh 'git push --set-upstream origin main'
                     }
                 }
             }
