@@ -73,7 +73,7 @@ spec:
                 githubEmail = 'kshun1207@naver.com' //c1t1d0s7@example.com 
                 githubId = 'kshun1207' //c1t1d0s7  
                 githubRepo = 'test-argocd' //jenkins-kube-deploy 
-                githubURL = "https://github.com/${githubI}/${githubRepo}.git" 
+                githubURL = "https://github.com/${githubId}/${githubRepo}.git" 
                 dockerhubId = 'kshun1207' //c1t1d0s7 
                 dockerhubRepo = 'kshun1207/mytomcat' //hello-world
             }
