@@ -83,7 +83,7 @@ spec:
                     sh "git config --global --add safe.directory ${workspace}"
                     sh "git config --global --add user.name ${githubUser}"
                     sh "git config --global --add user.email ${githubEmail}"
-                    sh 'sed -i "s/image:.*/image:${dockerhubId}/${dockerhubRepo}:${BUILD_NUMBER}/g" deployment.yaml'
+                    sh 'sed -i "s/image:.*/image: ${dockerhubId}\\/${dockerhubRepo}:${BUILD_NUMBER}/g" deployment.yaml'
                     sh 'git add deployment.yaml'
                     sh 'git commit -m "jenkins build number -> ${BUILD_NUMBER}"'
                     withCredentials([gitUsernamePassword(credentialId: 'github-credential', gitTooName: 'Default')]){
